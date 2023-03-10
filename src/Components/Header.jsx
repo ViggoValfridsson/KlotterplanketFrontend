@@ -1,11 +1,16 @@
-import React from "react";
+import classes from "./Header.module.css";
+import { BiPlus } from "react-icons/bi";
 
 const Header = () => {
   return (
     <>
-      <header>
-        <h1>Klotterplanket</h1>
-        <button type="button">Create post</button>
+      <header className={classes.header}>
+        <div className={`${classes.header_container} ${"container"}`}>
+          <h1 className={classes.title}>Klotterplanket</h1>
+          <button type="button" className={`${classes.upload} ${"btn"}`}>
+            <BiPlus className={classes.icon} />
+          </button>
+        </div>
       </header>
     </>
   );
