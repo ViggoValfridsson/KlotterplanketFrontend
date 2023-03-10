@@ -1,0 +1,25 @@
+.footer {
+  border-top: 1px solid var(--color-primary);
+  display: flex;
+  align-items: center;
+  height: 7rem;
+}
+
+.footer_title {
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+
+@media (min-width: 600px) {
+  .footer {
+    height: 8.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    height: 10rem;
+  }
+}

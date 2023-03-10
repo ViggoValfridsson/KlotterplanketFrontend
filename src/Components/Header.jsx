@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <>
       <header className={classes.header}>
-        <div className={`${classes.header_container} ${"container"}`}>
+        <div className={`${classes.header_container} container`}>
           <h1 className={classes.title}>Klotterplanket</h1>
           <button type="button" className={`${classes.upload} ${"btn"}`}>
             <BiPlus className={classes.icon} />

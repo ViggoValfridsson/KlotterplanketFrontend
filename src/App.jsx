@@ -8,12 +8,14 @@ function App() {
   return (
     <Router>
       <Header />
-      <div className={classes.main}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
+      <div className={classes.footer_main_container}>
+        <div className={`${classes.main} container`}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </Router>
   );
 }
