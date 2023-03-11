@@ -1,0 +1,22 @@
+.order_form {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.order_label {
+  color: var(--color-light);
+  font-size: 1rem;
+}
+
+.order_select {
+  position: relative;
+  background-color: var(--color-bg);
+  color: var(--color-light);
+  border: 1px solid var(--color-primary);
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  width: 10rem;
+}

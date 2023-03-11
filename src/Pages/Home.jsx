@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useState } from "react";
+import PostSorting from "../Components/PostSorting";
 
 const Home = () => {
-  return (
-    <div>Home</div>
-  )
-}
+  const [order, setOrder] = useState("desc");
 
-export default Home
+  return (
+    <>
+      <section>
+        <PostSorting setOrder={setOrder} />
+        posts
+      </section>
+    </>
+  );
+};
+
+export default Home;
