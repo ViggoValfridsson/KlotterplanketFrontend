@@ -10,16 +10,16 @@
 }
 
 .modal_container {
-  border: 2px solid var(--color-primary);
+  border: 2px solid var(--color-primary-variant);
   padding: 1rem;
   width: 80%;
   border-radius: 10px;
-  background-color: var(--color-primary-variant);
+  background-color: var(--color-bg);
   box-shadow: rgba(0, 0, 0, 0.5) 5px 10px 25px;
 }
 
 .modal_container button {
-  background-color: var(--color-primary-variant);
+  background-color: var(--color-bg);
   color: var(--color-light);
   border-width: 2px;
   font-size: 1rem;
