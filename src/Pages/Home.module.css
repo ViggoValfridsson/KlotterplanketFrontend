@@ -13,3 +13,9 @@
   width: 100%;
   height: 55vh;
 }
+
+@media (min-width: 1024px) {
+  .post_container {
+    margin-top: 0;
+  }
+}
