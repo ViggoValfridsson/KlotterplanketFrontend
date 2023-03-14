@@ -12,7 +12,7 @@ const Modal = ({ setOpenModal }) => {
     <div className={classes.modal_background} onClick={(e) => handleClickOutside(e)}>
       <div className={classes.modal_container}>
         <div className={classes.modal_title}>
-          <h2>Create Post</h2>
+          <h2>Create a new post</h2>
           <button type="button" onClick={() => setOpenModal(false)} className={`${classes.title_close_btn} btn`}>
             <AiOutlineClose className={classes.close_icon} />
           </button>
