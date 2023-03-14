@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { CircularProgress } from "@mui/material";
 import PostItem from "../Components/PostItem";
 import PostSorting from "../Components/PostSorting";
 import useFetch from "../Hooks/useFetch";
@@ -14,7 +15,11 @@ const Home = () => {
     <>
       <section>
         <PostSorting setOrder={setOrder} />
-        {isPending && <div>loading...</div>}
+        {isPending && ( 
+          <div className={classes.spinnerContainer}>
+               <CircularProgress className={classes.spinner} color="inherit" size="10rem" />
+          </div>
+          )}
         {error && <div>{error}</div>}
         {posts && !error && (
           <div className={classes.post_container}>
