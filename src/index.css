@@ -23,6 +23,8 @@
   --color-primary-variant: #292b66;
   --color-white: #fff;
   --color-light: #f3f4f5;
+  --color-warning: #da373c;
+  --color-warning-variant: #ce080e;
 
   --transition: all 400ms ease;
 
