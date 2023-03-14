@@ -9,7 +9,7 @@ const useFetch = (url) => {
     fetch(url)
       .then((response) => {
         if (!response.ok) {
-          throw Error("Could not fetch that resourc, please try again.");
+          throw Error("Could not fetch that resource, please try again.");
         }
         return response.json();
       })
