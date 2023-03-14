@@ -1,0 +1,48 @@
+.header {
+  border-bottom: 1px solid var(--color-primary);
+}
+
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.title {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+
+button.upload {
+  border-radius: 10px;
+  padding: 0;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+@media (min-width: 600px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  button.upload {
+    height: 45px;
+    width: 45px;
+  }
+}
+
+@media (min-width: 1024px) {
+  button.upload {
+    height: 50px;
+    width: 50px;
+  }
+}
