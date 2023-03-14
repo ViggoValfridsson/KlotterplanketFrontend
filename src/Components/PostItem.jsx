@@ -5,7 +5,7 @@ const PostItem = ({ post }) => {
     <>
       <div className={classes.post}>
         <p className={classes.message}>{post.message}</p>
-        <p>{post.postedAt.slice(0, 10)}</p>
+        <p>{post.postedAt.slice(0, 10) + " " + post.postedAt.slice(11, 16)}</p>
       </div>
     </>
   );
