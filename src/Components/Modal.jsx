@@ -6,11 +6,10 @@ import classes from "./Modal.module.css";
 import Error from "./Error";
 import SuccessMessage from "./SuccessMessage";
 
-const Modal = ({ setOpenModal }) => {
+const Modal = ({ setOpenModal, success, setSuccess }) => {
   const [isPosting, setIsPosting] = useState(false);
   const [error, setError] = useState(false);
   const [message, setMessage] = useState();
-  const [success, setSuccess] = useState(false);
   const endpoint = `https://usxsq020kb.execute-api.eu-north-1.amazonaws.com/api/posts`;
 
   const handleClickOutside = (e) => {
@@ -60,8 +59,7 @@ const Modal = ({ setOpenModal }) => {
     setTimeout(() => {
       setSuccess(false);
       setOpenModal(false);
-      location.reload();
-    }, 3000);
+    }, 1500);
   };
 
   return (
