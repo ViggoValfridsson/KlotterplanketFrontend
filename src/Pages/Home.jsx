@@ -6,10 +6,10 @@ import Error from "../Components/Error";
 import useFetch from "../Hooks/useFetch";
 import classes from "./Home.module.css";
 
-const Home = () => {
+const Home = ({success}) => {
   const [order, setOrder] = useState("desc");
   const endpoint = `https://usxsq020kb.execute-api.eu-north-1.amazonaws.com/api/posts/ordering/${order}`;
-  const { isPending, error, data: posts } = useFetch(endpoint);
+  const { isPending, error, data: posts } = useFetch(endpoint, success);
 
   return (
     <>

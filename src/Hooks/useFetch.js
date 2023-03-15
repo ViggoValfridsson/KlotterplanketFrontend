@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useFetch = (url) => {
+const useFetch = (url, dependency) => {
   const [isPending, setIsPending] = useState(true);
   const [error, setError] = useState(null);
   const [data, setData] = useState(null);
@@ -22,7 +22,7 @@ const useFetch = (url) => {
         setIsPending(false);
         setError(err.message);
       });
-  }, [url]);
+  }, [url, dependency]);
 
   return { isPending, error, data };
 };
