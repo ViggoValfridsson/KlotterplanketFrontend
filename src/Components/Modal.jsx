@@ -1,14 +1,16 @@
 import { useState } from "react";
-import classes from "./Modal.module.css";
 import { AiOutlineClose } from "react-icons/ai";
 import { CircularProgress } from "@mui/material";
+import { AiOutlineCheck } from "react-icons/ai";
+import classes from "./Modal.module.css";
 import Error from "./Error";
+import SuccessMessage from "./SuccessMessage";
 
 const Modal = ({ setOpenModal }) => {
   const [isPosting, setIsPosting] = useState(false);
   const [error, setError] = useState(false);
   const [message, setMessage] = useState();
-  const [success, setSuccess] = useState(true);
+  const [success, setSuccess] = useState(false);
   const endpoint = `https://usxsq020kb.execute-api.eu-north-1.amazonaws.com/api/posts`;
 
   const handleClickOutside = (e) => {
@@ -80,35 +82,48 @@ const Modal = ({ setOpenModal }) => {
               {error && <Error message={error} />}
               {!error && (
                 <div className={classes.modal_body}>
-                  <form className={classes.form} onSubmit={handleSubmit}>
-                    <label htmlFor="message">Write your post below:</label>
-                    <div className={classes.text_container}>
-                      <textarea
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                        type="text"
-                        name="message"
-                        id="message"
-                        placeholder="Your post message..."
-                      />
+                  {success && (
+                    <div className={classes.success_icon_container}>
+                      <span className={classes.success_icon}>
+                        <AiOutlineCheck />
+                      </span>
                     </div>
-                    <div className={classes.button_container}>
-                      <button type="button" onClick={() => setOpenModal(false)} className={`${classes.close_btn} btn`}>
-                        Cancel
-                      </button>
-                      <button type="submit" className="btn">
-                        Submit
-                      </button>
-                    </div>
-                    {error && <div>{error}</div>}
-                  </form>
+                  )}
+                  {!success && (
+                    <form className={classes.form} onSubmit={handleSubmit}>
+                      <label htmlFor="message">Write your post below: </label>
+                      <div className={classes.text_container}>
+                        <textarea
+                          value={message}
+                          onChange={(e) => setMessage(e.target.value)}
+                          type="text"
+                          name="message"
+                          id="message"
+                          placeholder="Your post message..."
+                        />
+                      </div>
+                      <div className={classes.button_container}>
+                        <button
+                          type="button"
+                          onClick={() => setOpenModal(false)}
+                          className={`${classes.close_btn} btn`}
+                        >
+                          Cancel
+                        </button>
+                        <button type="submit" className="btn">
+                          Submit
+                        </button>
+                      </div>
+                      {error && <div>{error}</div>}
+                    </form>
+                  )}
                 </div>
               )}
             </>
           )}
         </div>
       </div>
-      {success && <div>Successfully posted</div>}
+      {success && <SuccessMessage />}
     </>
   );
 };
