@@ -59,6 +59,8 @@ const Modal = ({ setOpenModal }) => {
 
     setTimeout(() => {
       setSuccess(false);
+      setOpenModal(false);
+      location.reload();
     }, 3000);
   };
 
