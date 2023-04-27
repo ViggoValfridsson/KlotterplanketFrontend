@@ -1,7 +1,5 @@
 # KlotterplanketFrontend
 
-Try it out: https://klotterplanket.netlify.app/
-
 ## About 
 A React application where you can post and view messages. 
 
